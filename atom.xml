@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Max|Blog</title>
+  
+  <subtitle>数据人生</subtitle>
+  <link href="https://zhy2021.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://zhy2021.github.io/"/>
+  <updated>2021-01-14T15:37:12.300Z</updated>
+  <id>https://zhy2021.github.io/</id>
+  
+  <author>
+    <name>Max</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>RabbitMQ消息队列</title>
+    <link href="https://zhy2021.github.io/2020/11/26/rabbitmq-xiao-xi-dui-lie/"/>
+    <id>https://zhy2021.github.io/2020/11/26/rabbitmq-xiao-xi-dui-lie/</id>
+    <published>2020-11-26T13:44:37.000Z</published>
+    <updated>2021-01-14T15:37:12.300Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;RabbitMQ-实战教程&quot;&gt;&lt;a href=&quot;#RabbitMQ-实战教程&quot; class=&quot;headerlink&quot; title=&quot;RabbitMQ 实战教程&quot;&gt;&lt;/a&gt;RabbitMQ 实战教程&lt;/h1&gt;&lt;h2 id=&quot;不同MQ的特点&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql基础补充与高级</title>
+    <link href="https://zhy2021.github.io/2020/11/23/mysql-ji-chu-bu-chong-yu-gao-ji/"/>
+    <id>https://zhy2021.github.io/2020/11/23/mysql-ji-chu-bu-chong-yu-gao-ji/</id>
+    <published>2020-11-23T09:03:13.000Z</published>
+    <updated>2021-01-14T15:36:44.080Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mysql&quot;&gt;&lt;a href=&quot;#mysql&quot; class=&quot;headerlink&quot; title=&quot;mysql&quot;&gt;&lt;/a&gt;mysql&lt;/h1&gt;&lt;h2 id=&quot;mysql基础补充&quot;&gt;&lt;a href=&quot;#mysql基础补充&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://zhy2021.github.io/categories/mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://zhy2021.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>java并发编程从0到n</title>
+    <link href="https://zhy2021.github.io/2020/10/29/java-bing-fa-bian-cheng-cong-0-dao-n/"/>
+    <id>https://zhy2021.github.io/2020/10/29/java-bing-fa-bian-cheng-cong-0-dao-n/</id>
+    <published>2020-10-29T02:15:14.000Z</published>
+    <updated>2021-01-14T15:34:06.650Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;并发编程&quot;&gt;&lt;a href=&quot;#并发编程&quot; class=&quot;headerlink&quot; title=&quot;并发编程&quot;&gt;&lt;/a&gt;并发编程&lt;/h1&gt;&lt;h2 id=&quot;1-进程与线程&quot;&gt;&lt;a href=&quot;#1-进程与线程&quot; class=&quot;headerlink&quot; title=&quot;1.</summary>
+        
+      
+    
+    
+    
+    <category term="并发" scheme="https://zhy2021.github.io/categories/%E5%B9%B6%E5%8F%91/"/>
+    
+    
+    <category term="并发" scheme="https://zhy2021.github.io/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jvm面试题</title>
+    <link href="https://zhy2021.github.io/2020/10/25/jvm-mian-shi-ti/"/>
+    <id>https://zhy2021.github.io/2020/10/25/jvm-mian-shi-ti/</id>
+    <published>2020-10-25T09:45:21.000Z</published>
+    <updated>2021-01-14T15:36:05.910Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JVM相关面试题&quot;&gt;&lt;a href=&quot;#JVM相关面试题&quot; class=&quot;headerlink&quot; title=&quot;JVM相关面试题&quot;&gt;&lt;/a&gt;JVM相关面试题&lt;/h1&gt;&lt;h2 id=&quot;jvm的内存模型以及分区情况和作用&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM09</title>
+    <link href="https://zhy2021.github.io/2020/10/22/jvm09/"/>
+    <id>https://zhy2021.github.io/2020/10/22/jvm09/</id>
+    <published>2020-10-22T14:12:13.000Z</published>
+    <updated>2021-01-14T15:35:56.780Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;垃圾回收器相关&quot;&gt;&lt;a href=&quot;#垃圾回收器相关&quot; class=&quot;headerlink&quot; title=&quot;垃圾回收器相关&quot;&gt;&lt;/a&gt;垃圾回收器相关&lt;/h1&gt;&lt;h2 id=&quot;GC分类与性能指标&quot;&gt;&lt;a href=&quot;#GC分类与性能指标&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM08</title>
+    <link href="https://zhy2021.github.io/2020/10/20/jvm08/"/>
+    <id>https://zhy2021.github.io/2020/10/20/jvm08/</id>
+    <published>2020-10-20T12:51:55.000Z</published>
+    <updated>2021-01-14T15:35:50.260Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;垃圾回收&quot;&gt;&lt;a href=&quot;#垃圾回收&quot; class=&quot;headerlink&quot; title=&quot;垃圾回收&quot;&gt;&lt;/a&gt;垃圾回收&lt;/h1&gt;&lt;h2 id=&quot;什么是垃圾&quot;&gt;&lt;a href=&quot;#什么是垃圾&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>JVM07</title>
+    <link href="https://zhy2021.github.io/2020/10/18/jvm07/"/>
+    <id>https://zhy2021.github.io/2020/10/18/jvm07/</id>
+    <published>2020-10-18T07:04:24.000Z</published>
+    <updated>2021-01-14T15:35:44.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;String-Table&quot;&gt;&lt;a href=&quot;#String-Table&quot; class=&quot;headerlink&quot; title=&quot;String Table&quot;&gt;&lt;/a&gt;String Table&lt;/h1&gt;&lt;h2 id=&quot;String的基本特性&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM06</title>
+    <link href="https://zhy2021.github.io/2020/10/16/jvm06/"/>
+    <id>https://zhy2021.github.io/2020/10/16/jvm06/</id>
+    <published>2020-10-16T07:21:30.000Z</published>
+    <updated>2021-01-14T15:35:38.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;执行引擎&quot;&gt;&lt;a href=&quot;#执行引擎&quot; class=&quot;headerlink&quot; title=&quot;执行引擎&quot;&gt;&lt;/a&gt;执行引擎&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hashmap的前世今生</title>
+    <link href="https://zhy2021.github.io/2020/10/12/hashmap-de-qian-shi-jin-sheng/"/>
+    <id>https://zhy2021.github.io/2020/10/12/hashmap-de-qian-shi-jin-sheng/</id>
+    <published>2020-10-12T03:16:38.000Z</published>
+    <updated>2021-01-14T15:33:51.240Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hashmap的n个问题&quot;&gt;&lt;a href=&quot;#hashmap的n个问题&quot; class=&quot;headerlink&quot; title=&quot;hashmap的n个问题&quot;&gt;&lt;/a&gt;hashmap的n个问题&lt;/h1&gt;&lt;h2 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="hashmap" scheme="https://zhy2021.github.io/categories/hashmap/"/>
+    
+    
+    <category term="hashmap" scheme="https://zhy2021.github.io/tags/hashmap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM04</title>
+    <link href="https://zhy2021.github.io/2020/10/11/jvm04/"/>
+    <id>https://zhy2021.github.io/2020/10/11/jvm04/</id>
+    <published>2020-10-11T11:02:24.000Z</published>
+    <updated>2021-01-14T15:35:27.470Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;方法区&quot;&gt;&lt;a href=&quot;#方法区&quot; class=&quot;headerlink&quot; title=&quot;方法区&quot;&gt;&lt;/a&gt;方法区&lt;/h1&gt;&lt;h2 id=&quot;栈，堆，方法区的交互关系&quot;&gt;&lt;a href=&quot;#栈，堆，方法区的交互关系&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM04</title>
+    <link href="https://zhy2021.github.io/2020/10/11/jvm05/"/>
+    <id>https://zhy2021.github.io/2020/10/11/jvm05/</id>
+    <published>2020-10-11T11:02:24.000Z</published>
+    <updated>2021-01-14T15:35:33.100Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;对象的实例化内存布局与访问定位&quot;&gt;&lt;a href=&quot;#对象的实例化内存布局与访问定位&quot; class=&quot;headerlink&quot; title=&quot;对象的实例化内存布局与访问定位&quot;&gt;&lt;/a&gt;对象的实例化内存布局与访问定位&lt;/h1&gt;&lt;h2 id=&quot;对象的实例化&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM03</title>
+    <link href="https://zhy2021.github.io/2020/10/09/jvm03/"/>
+    <id>https://zhy2021.github.io/2020/10/09/jvm03/</id>
+    <published>2020-10-09T12:42:17.000Z</published>
+    <updated>2021-01-14T15:35:22.160Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;堆&quot;&gt;&lt;a href=&quot;#堆&quot; class=&quot;headerlink&quot; title=&quot;堆&quot;&gt;&lt;/a&gt;堆&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;线程共享堆空间和方法区&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM02</title>
+    <link href="https://zhy2021.github.io/2020/09/25/jvm02/"/>
+    <id>https://zhy2021.github.io/2020/09/25/jvm02/</id>
+    <published>2020-09-25T08:02:23.000Z</published>
+    <updated>2021-01-14T15:35:15.880Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;运行时数据区&quot;&gt;&lt;a href=&quot;#运行时数据区&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="-jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java8新特性</title>
+    <link href="https://zhy2021.github.io/2020/09/21/java8-xin-te-xing/"/>
+    <id>https://zhy2021.github.io/2020/09/21/java8-xin-te-xing/</id>
+    <published>2020-09-21T14:03:28.000Z</published>
+    <updated>2021-01-14T15:33:57.540Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;java8新特性&quot;&gt;&lt;a href=&quot;#java8新特性&quot; class=&quot;headerlink&quot; title=&quot;java8新特性&quot;&gt;&lt;/a&gt;java8新特性&lt;/h1&gt;&lt;h2 id=&quot;生态&quot;&gt;&lt;a href=&quot;#生态&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="-java" scheme="https://zhy2021.github.io/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>leetcode刷题</title>
+    <link href="https://zhy2021.github.io/2020/09/21/leetcode-shua-ti/"/>
+    <id>https://zhy2021.github.io/2020/09/21/leetcode-shua-ti/</id>
+    <published>2020-09-21T08:39:57.000Z</published>
+    <updated>2021-01-14T15:36:11.910Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Leetcode题目&quot;&gt;&lt;a href=&quot;#Leetcode题目&quot; class=&quot;headerlink&quot; title=&quot;Leetcode题目&quot;&gt;&lt;/a&gt;Leetcode题目&lt;/h1&gt;&lt;h2 id=&quot;数组&quot;&gt;&lt;a href=&quot;#数组&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="leetcode" scheme="https://zhy2021.github.io/tags/leetcode/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM</title>
+    <link href="https://zhy2021.github.io/2020/09/18/jvm/"/>
+    <id>https://zhy2021.github.io/2020/09/18/jvm/</id>
+    <published>2020-09-18T10:07:56.000Z</published>
+    <updated>2021-01-14T15:35:02.290Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;JVM内存和垃圾回收篇&quot;&gt;&lt;a href=&quot;#JVM内存和垃圾回收篇&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/categories/jvm/"/>
+    
+    
+    <category term="jvm" scheme="https://zhy2021.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ActiveMQ</title>
+    <link href="https://zhy2021.github.io/2020/09/17/activemq/"/>
+    <id>https://zhy2021.github.io/2020/09/17/activemq/</id>
+    <published>2020-09-17T06:20:22.000Z</published>
+    <updated>2021-01-14T15:32:50.280Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ActiveMQ入门&quot;&gt;&lt;a href=&quot;#ActiveMQ入门&quot; class=&quot;headerlink&quot; title=&quot;ActiveMQ入门&quot;&gt;&lt;/a&gt;ActiveMQ入门&lt;/h1&gt;&lt;h2 id=&quot;消息&quot;&gt;&lt;a href=&quot;#消息&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="消息中间件" scheme="https://zhy2021.github.io/categories/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+    
+    <category term="ActiveMQ" scheme="https://zhy2021.github.io/tags/ActiveMQ/"/>
+    
+    <category term="消息中间件" scheme="https://zhy2021.github.io/tags/%E6%B6%88%E6%81%AF%E4%B8%AD%E9%97%B4%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>docker容器化技术</title>
+    <link href="https://zhy2021.github.io/2020/08/26/docker-rong-qi-hua-ji-zhu/"/>
+    <id>https://zhy2021.github.io/2020/08/26/docker-rong-qi-hua-ji-zhu/</id>
+    <published>2020-08-26T10:57:42.000Z</published>
+    <updated>2021-01-14T15:32:59.420Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Docker-学习&quot;&gt;&lt;a href=&quot;#Docker-学习&quot; class=&quot;headerlink&quot; title=&quot;Docker 学习&quot;&gt;&lt;/a&gt;Docker 学习&lt;/h1&gt;&lt;blockquote&gt;
+&lt;p&gt;Docker 官网：&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Docker" scheme="https://zhy2021.github.io/categories/Docker/"/>
+    
+    
+    <category term="微服务" scheme="https://zhy2021.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
+    
+    <category term="Docker" scheme="https://zhy2021.github.io/tags/Docker/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>dubbo遇到的问题</title>
+    <link href="https://zhy2021.github.io/2020/08/10/dubbo-yu-dao-de-wen-ti/"/>
+    <id>https://zhy2021.github.io/2020/08/10/dubbo-yu-dao-de-wen-ti/</id>
+    <published>2020-08-10T02:58:49.000Z</published>
+    <updated>2021-01-14T15:33:18.190Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;问题产生环境：  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dubbo 2.7.6&lt;/li&gt;
+&lt;li&gt;springboot 2.2.6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;启用dubbo后,</summary>
+        
+      
+    
+    
+    
+    <category term="dubbo" scheme="https://zhy2021.github.io/categories/dubbo/"/>
+    
+    
+    <category term="dubbo" scheme="https://zhy2021.github.io/tags/dubbo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性表_模拟ArrayList的实现</title>
+    <link href="https://zhy2021.github.io/2020/08/08/xian-xing-biao-mo-ni-arraylist-de-shi-xian/"/>
+    <id>https://zhy2021.github.io/2020/08/08/xian-xing-biao-mo-ni-arraylist-de-shi-xian/</id>
+    <published>2020-08-08T10:01:17.000Z</published>
+    <updated>2021-01-14T15:34:50.640Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;线性表&quot;&gt;&lt;a href=&quot;#线性表&quot; class=&quot;headerlink&quot; title=&quot;线性表&quot;&gt;&lt;/a&gt;线性表&lt;/h1&gt;&lt;h2 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="线性表" scheme="https://zhy2021.github.io/categories/%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+    
+    
+    <category term="数据结构" scheme="https://zhy2021.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="线性表" scheme="https://zhy2021.github.io/tags/%E7%BA%BF%E6%80%A7%E8%A1%A8/"/>
+    
+    <category term="ArrayList" scheme="https://zhy2021.github.io/tags/ArrayList/"/>
+    
+  </entry>
+  
+</feed>

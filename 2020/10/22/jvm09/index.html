@@ -1,0 +1,1794 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="JVM09, Max|Blog">
+    <meta name="description" content="life is a fucking movie">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>JVM09 | Max|Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="Max|Blog" type="application/atom+xml">
+</head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Max|Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Max|Blog</div>
+        <div class="logo-desc">
+            
+            life is a fucking movie
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/zhy2021/zhy2021.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/zhy2021/zhy2021.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">JVM09</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/jvm/">
+                                <span class="chip bg-color">jvm</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/jvm/" class="post-category">
+                                jvm
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-10-22
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    4.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="垃圾回收器相关"><a href="#垃圾回收器相关" class="headerlink" title="垃圾回收器相关"></a>垃圾回收器相关</h1><h2 id="GC分类与性能指标"><a href="#GC分类与性能指标" class="headerlink" title="GC分类与性能指标"></a>GC分类与性能指标</h2><blockquote>
+<p>分类</p>
+</blockquote>
+<ul>
+<li>线程数  串行和并行</li>
+<li>工作模式   并发式垃圾回收  和  独占式垃圾回收</li>
+<li>碎片处理方式<ul>
+<li>压缩式，分配对象用指针碰撞</li>
+<li>非压缩式，分配对象用空闲列表</li>
+</ul>
+</li>
+<li>工作的内存区间<ul>
+<li>年轻代垃圾收集器</li>
+<li>老年代垃圾收集器</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>性能指标</p>
+</blockquote>
+<ul>
+<li><strong>吞吐量：运行用户代码的时间占总运行时间的比例</strong><ul>
+<li>总运行时间：程序的运行时间+内存回收的时间</li>
+</ul>
+</li>
+<li>垃圾收集开销：吞吐量的补数</li>
+<li><strong><font color = "red">暂停时间：执行GC时，程序的工作线程被暂停的时间</font></strong></li>
+<li>收集频率：相对于应用程序的执行，收集操作发生的频率</li>
+<li><strong>内存占用：java堆区所占的内存大小</strong></li>
+<li>快速：一个对象从诞生到被回收所经历的时间</li>
+</ul>
+<p><img src="https://img01.sogoucdn.com/app/a/100520146/29eadcb517bddc8e7d8bf9665679ed6a"></p>
+<h2 id="不同的垃圾回收器概述-面试会问"><a href="#不同的垃圾回收器概述-面试会问" class="headerlink" title="不同的垃圾回收器概述(面试会问)"></a>不同的垃圾回收器概述(面试会问)</h2><p><img src="https://img03.sogoucdn.com/app/a/100520146/e71ca3bc35fec312db08fc9f227cb00b" alt="UTOOLS1603418671399.png"></p>
+<ul>
+<li>串行回收： Serial、Serial old</li>
+<li>并行回收：ParNew、Parallel、Scavenge、Parallel old</li>
+<li>并发回收：CMS、G1</li>
+</ul>
+<blockquote>
+<p>垃圾回收器的组合关系</p>
+</blockquote>
+<p><img src="https://img03.sogoucdn.com/app/a/100520146/003f4646493bfd2852b7bd4a3842034b" alt="分代垃圾收集器"></p>
+<p><img src="https://img04.sogoucdn.com/app/a/100520146/f27f9f03ee4bc028e9308f08e64d5f4b" alt="垃圾收集器的组合关系"></p>
+<h2 id="Serial回收器：串行回收"><a href="#Serial回收器：串行回收" class="headerlink" title="Serial回收器：串行回收"></a>Serial回收器：串行回收</h2><blockquote>
+<p>最基本最悠久的<strong>单cpu</strong>垃圾收集器</p>
+</blockquote>
+<ul>
+<li><p>采用 <strong>复制算法</strong>、<strong>串行回收</strong>和 <strong>STW机制的方式执行内存回收</strong></p>
+</li>
+<li><p>除了年轻代以外，Serial收集器还提供用于执行老年代垃圾收集的Serial Old收集器。<strong>Serial Old收集器同样也采用了串行回收和STW机制，只不过内存回收算法使用的是标记-压缩算法。</strong></p>
+<ul>
+<li>Serial Old是运行在Client模式下默认的老年代的垃圾回收器</li>
+<li>Serial Old在Server模式下主要有两个用途：①与新生代的Parallel Scavenge配合使用。②作为老年代CMS收集器的后备垃圾收集方案</li>
+</ul>
+</li>
+<li><p><strong>是个单线程垃圾收集器</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>优势：</p>
+</blockquote>
+<ul>
+<li><p><strong>简单而高效</strong>，对于限定单个cpu的环境来说，Serial收集器由于没有线程交互的开销，专心做GC自然可以获得最高的效率</p>
+</li>
+<li><p>在用户的桌面引用场景中可以用串行回收器</p>
+</li>
+<li><p>使用-XX:+UseSerialGC 参数可以指定年轻代和老年代都使用串行收集器</p>
+<ul>
+<li>等价于新生代用 Serial GC 老年代用 Serial Old GC</li>
+</ul>
+</li>
+</ul>
+<h2 id="ParNew回收器：并行回收"><a href="#ParNew回收器：并行回收" class="headerlink" title="ParNew回收器：并行回收"></a>ParNew回收器：并行回收</h2><blockquote>
+<p>ParNew收集器除了采用 <strong>并行回收</strong>的方式执行内存回收外，几乎跟Serial GC没有任何区别。</p>
+<p>ParNew<strong>在年轻代中同样采用复制算法，STW机制</strong></p>
+<p>ParNew是很多JVM运行在Server模式下新生代的默认垃圾回收器</p>
+</blockquote>
+<ul>
+<li>在多cpu的环境下，ParNew可以更快速地完成垃圾收集，提升程序的吞吐量</li>
+<li>除了Serial外还能和CMS进行配合使用</li>
+</ul>
+<h2 id="Parallel回收器：吞吐量优先"><a href="#Parallel回收器：吞吐量优先" class="headerlink" title="Parallel回收器：吞吐量优先"></a>Parallel回收器：吞吐量优先</h2><blockquote>
+<p>hotspot中收集新生代的除了ParNew GC是基于并行回收的之外，Parallel Scavenge GC同样 <strong>采用了复制算法，并行回收和STW机制</strong></p>
+<p>jdk8中默认的垃圾收集器</p>
+</blockquote>
+<ul>
+<li><strong>Parallel的出现是否多此一举？</strong><ul>
+<li>Parallel scavenge GC收集器的目标是<strong>达到一个可控制的吞吐量</strong>，是一个吞吐量优先的垃圾收集器</li>
+<li><strong>自适应调节策略</strong>也是Parallel Scavenge和ParNew不一样的地方</li>
+</ul>
+</li>
+<li>高吞吐量则可以高效率地利用cpu时间，尽快完成程序的运算任务，主要要<strong>适合在后台运算而不需要太多交互的任务。</strong>因此，常见在服务器环境中使用。例如批量处理，订单处理，工资支付，科学计算的应用程序。</li>
+<li>Parallel Old GC用来代替老年代的Serial Old GC</li>
+<li>Parallel Old收集器采用了 <strong>标记-压缩算法</strong>，但同样也是<strong>基于 并行回收和STW机制的</strong></li>
+</ul>
+<blockquote>
+<p>参数设置</p>
+</blockquote>
+<ul>
+<li>-XX:+UseParallelGC  手动指定年轻代 ParallelGC</li>
+<li>-XX:+UseParallelOldGC  手动指定老年代ParallelOldGC</li>
+<li>-XX:+UseSerialGC  表明新生代使用Serial GC，老年代用Serial Old GC</li>
+<li>-XX:+UseParNewGC  表明新生代使用ParNew GC</li>
+<li>-XX:ParallelGCThreads 设置年轻代并行收集器的线程数<ul>
+<li>在默认情况下，当cpu数量小于8个，ParallelGCThreads的值等于CPU数量</li>
+<li>当CPU数量大于8个，ParallelGCThreads的值等于3+[5*CPU_Count]/8</li>
+</ul>
+</li>
+<li><img src="https://img02.sogoucdn.com/app/a/100520146/6736c6f7de5b3279191bf05fd9f6f725" alt="UTOOLS1603443657076.png"></li>
+</ul>
+<h2 id="CMS回收器：低延迟"><a href="#CMS回收器：低延迟" class="headerlink" title="CMS回收器：低延迟"></a>CMS回收器：低延迟</h2><blockquote>
+<p>第一款 <strong>并发收集器</strong>，第一次让垃圾收集线程和用户线程同时工作。</p>
+<p>GC算法采用 <strong>标记-清除算法</strong>，也会STW</p>
+</blockquote>
+<ul>
+<li>只能与ParNew和Parallel二选一配合工作</li>
+<li>jdk14CMS没了</li>
+</ul>
+<blockquote>
+<p>工作原理</p>
+</blockquote>
+<p><img src="https://img04.sogoucdn.com/app/a/100520146/a72dd7841db48c6357f7da617d670ba5"></p>
+<ul>
+<li>初始标记：<strong>仅仅标记出GC Roots能够直接关联到的对象</strong>，这里的执行速度非常快，STW很短暂</li>
+<li>并发标记：从GC Roots的直接关联对象开始遍历整个对像图的过程，这个过程耗时较长，但是<strong>不需要停顿用户线程</strong>，可以与垃圾收集线程一起并发运行</li>
+<li>重新标记： <strong>修正并发标记期间，因用户程序继续运作而导致标记产生变动的那一部分对象的标记记录</strong>，这个阶段的停顿时间通常会比初始标记阶段稍长一些，但也远比并发标记阶段的时间短</li>
+<li>并发清除：此阶段<strong>清理删除掉标记阶段判断的已经死亡的对象，释放内存空间</strong>。不需要移动存活对象，可以与用户线程同时并发执行</li>
+</ul>
+<blockquote>
+<p>特点</p>
+</blockquote>
+<ul>
+<li><p><strong>由于最耗费时间的并发标记与并发清除阶段都不需要暂停工作，所以整体的回收是低停顿的。</strong></p>
+</li>
+<li><p>因为用户线程和GC线程是并行的，所以<strong>CMS回收的时候还应该确保程序用户线程有足够的内存可用</strong>，所以CMS的GC机制是<strong>当堆内存使用率达到了一个阈值，就会开始GC</strong>。</p>
+</li>
+<li><p>如果在GC的时候，用户线程把内存弄不足了，就会启动<strong>Serial Old 收集器来进行老年代</strong>的GC，<strong>停顿时间就会变长</strong></p>
+</li>
+</ul>
+<blockquote>
+<p>采用标记-清除算法，，使用空闲列表</p>
+</blockquote>
+<p>因为用户线程在工作中，所以不能使用指针碰撞和标记压缩算法。。</p>
+<blockquote>
+<p>CMS的优点：</p>
+</blockquote>
+<ol>
+<li>并发收集</li>
+<li>低延迟</li>
+</ol>
+<blockquote>
+<p>CMS的弊端</p>
+</blockquote>
+<ul>
+<li><p>会产生内存碎片</p>
+</li>
+<li><p>CMS收集器对cpu资源非常敏感</p>
+<blockquote>
+<p>在并发阶段，它虽然不会导致用户停顿，但是会因为占用了一部分线程而导致应用程序变慢，总吞吐量降低</p>
+</blockquote>
+</li>
+<li><p>CMS收集器无法处理<strong>浮动垃圾</strong></p>
+<blockquote>
+<p><strong>在并发标记阶段如果产生新的垃圾对象，CMS将无法对这些垃圾对象进行标记，最终会导致这些新产生的垃圾对象没有被及时回收，</strong>从而只能在下一次执行GC时释放这些之前未被回收的内存空间。</p>
+<p>浮动垃圾：重新标记修正的那些</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>设置参数</p>
+</blockquote>
+<ul>
+<li>-XX:+UseConcMarkSweepGC 手动指定CMS收集器执行内存回收任务（ParNew收集年轻代 CMS收集老年代，Serial Old作为备用收集老年代）</li>
+<li>。。。。。。</li>
+</ul>
+<blockquote>
+<p>小结</p>
+</blockquote>
+<p>最小化使用内存和最小化并行开销  Serial GC</p>
+<p>最大化应用程序吞吐量  Parallel GC</p>
+<p>最小化GC的中断或停顿时间  CMS GC</p>
+<h2 id="G1回收器：区域化分代式"><a href="#G1回收器：区域化分代式" class="headerlink" title="G1回收器：区域化分代式"></a>G1回收器：区域化分代式</h2><blockquote>
+<p>官方给G1设定的目标是<strong>在延迟可控的情况下获得尽可能高的吞吐量</strong>，也就是变成全能的收集器。</p>
+</blockquote>
+<ol>
+<li>结构：<ul>
+<li>G1是一个并行回收器，它把堆内存分割为很多不相关的区域(Region)<strong>并且是物理上不连续的</strong>。使用不同的Region来表示Eden、幸存者0区、幸存者1区，老年代等。</li>
+<li>G1 GC有计划地规避在整个Java堆中进行全区域的垃圾收集。G1跟踪各个Region里的垃圾堆积的价值大小（回收所获得的空间大小以及回收所需时间的经验值），在后台维护一个优先列表，<strong>每次根据允许的收集时间，优先回收价值最大的Region</strong></li>
+<li>由于这种方式的侧重点在于回收垃圾最大量的区间，所以我们给G1一个名字：<strong>垃圾优先</strong></li>
+</ul>
+</li>
+<li><img src="https://img02.sogoucdn.com/app/a/100520146/a5d0da53fa075959d95fe3e97b78c0ec" alt="UTOOLS1603456064907.png"></li>
+</ol>
+<blockquote>
+<p>G1 的特点优势</p>
+</blockquote>
+<ul>
+<li><p>并行与并发</p>
+<ul>
+<li>并行性：G1在回收期间，可以有多个GC线程同时工作，有效利用多核计算能力。用户线程会STW</li>
+<li>并发性：G1拥有与应用程序交替执行的能力，部分工作可以和应用程序同时执行，因此，一般来说，不会再整个回收阶段发生完全阻塞应用程序的情况</li>
+</ul>
+</li>
+<li><p>分代收集</p>
+<ul>
+<li>G1仍然属于分代型垃圾回收器，会区分年轻代和老年代，年轻代依然有Eden和Survivor区。从堆结构上看，他们可以是不连续的，没有固定的大小，没有固定的数量。</li>
+<li>将堆空间分为若干个区域，这些区域中包含了逻辑上的年轻代和老年代</li>
+<li>和之前的各类回收器不同，它同时 <strong>兼顾年轻代和老年代</strong></li>
+</ul>
+</li>
+<li><p>空间整合</p>
+<ul>
+<li>CMS：“标记-清除”算法、内存碎片、若干次GC后进行以此碎片整理</li>
+<li>G1将内存划分为一个个的region。内存的回收是以region作为基本单位的。<strong>Region之间是复制算法</strong>，整体上可以看作是标记-压缩算法，两个算法都能避免内存碎片。<strong>不会因为分配大对象的时候找不到连续内存空间而提前触发下一次GC</strong>。当java堆特别大的时候，G1优势更加明显</li>
+</ul>
+</li>
+<li><p>可预测的停顿时间模型</p>
+<blockquote>
+<p>在追求低停顿的情况下，，还可以<strong>建立一个能够让使用者明确指定一个长度为M毫秒的时间片段内，消耗在GC上的时间不能超过N毫秒</strong></p>
+</blockquote>
+<ul>
+<li>维护一个列表，跟踪各个Region里面的垃圾价值大小，优先回收价值最大的Region提前GC</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>G1的不足</p>
+</blockquote>
+<ul>
+<li><p>G1比传统的垃圾回收器有更高的内存占用，额外负载更多</p>
+</li>
+<li><p>从经验上来说，在小内存应用上CMS的表现大概率会优于G1，而G1在大内存应用上则会发挥其优势。平衡点在6-8GB之间。</p>
+</li>
+</ul>
+<blockquote>
+<p>G1的参数设置</p>
+</blockquote>
+<p><img src="https://img03.sogoucdn.com/app/a/100520146/3685edf0178147da780297b6fbb557f6"></p>
+<blockquote>
+<p>三步走</p>
+</blockquote>
+<ul>
+<li>开启G1垃圾收集器</li>
+<li>设置堆的最大内存</li>
+<li>设置最大停顿时间</li>
+</ul>
+<blockquote>
+<p>使用场景</p>
+</blockquote>
+<ul>
+<li>面向服务端应用，针对具有大内存，多处理器的机器</li>
+<li>最主要的应用是需要低GC延迟，并具有大堆的应用程序提供解决方案</li>
+<li>用来替换掉CMS收集器：<ol>
+<li>超过50%的java堆被活动数据占用</li>
+<li>对象分配频率或年代提升频率变化很大</li>
+<li>GC停顿时间过长（0.5-1s）</li>
+</ol>
+</li>
+<li>Hotspot垃圾收集器里，除了G1外，其他的垃圾收集器使用内置的JVM线程执行GC的多线程操作，而G1 GC可以采用应用程序线程承担后台运行的GC工作，即当JVM的GC线程处理速度慢时，系统会调用应用程序线程帮助加速垃圾回收过程。</li>
+</ul>
+<h3 id="分区Region：化整为零"><a href="#分区Region：化整为零" class="headerlink" title="分区Region：化整为零"></a>分区Region：化整为零</h3><p><img src="https://img04.sogoucdn.com/app/a/100520146/bbf6b356dd99b1bddb7094a66a55f9be"></p>
+<ul>
+<li>一个region有可能属于Eden，Survivor 或者Old/Tenured内存区域。但是一个region只可能属于一个角色。</li>
+<li>G1增加了一种新的内存区域，叫做Humongous内存区域，如图中的H块，<strong>主要用于存储大对象</strong>，如果超过<strong>1.5</strong>个region，就放到H</li>
+</ul>
+<blockquote>
+<p>region的GC</p>
+</blockquote>
+<p>当eden区满了，会执行GC操作，最终eden区会被清空，变成白色，放入一个空闲列表中，就可以用来存放任何类型的数据，拥有自适应的能力。</p>
+<blockquote>
+<p>为什么要设置大对象H区？</p>
+</blockquote>
+<p>对于堆中的大对象，默认会直接被分配到老年代，<strong>但是如果它是一个短期存在的大对象</strong>，就会对垃圾收集器造成负面影响。为了解决这个问题，G1专门划分了一个Humongous区，用来存放大对象。<strong>如果H区装不下，那么G1会寻找连续的H区来储存</strong>。为了能找到连续的H区，有时候不得不启动Full GC。G1的大多数行为都把H区作为老年代的一部分来看待。</p>
+<h3 id="G1回收器垃圾回收过程"><a href="#G1回收器垃圾回收过程" class="headerlink" title="G1回收器垃圾回收过程"></a>G1回收器垃圾回收过程</h3><blockquote>
+<p>G1的垃圾回收过程有三个环节：</p>
+<ul>
+<li>年轻代GC （Young GC）</li>
+<li>老年代并发标记过程（Concurrent Marking）</li>
+<li>混合回收（Mixed GC）</li>
+<li>（如果需要，单线程、独占式、高强度的Full GC还是继续存在的。它针对GC的评估失败提供了一种失败保护机制，即强力回收）具体的跟CMS的差不多</li>
+</ul>
+</blockquote>
+<p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201024104256465.png"></p>
+<p>①年轻代的<strong>Eden区用尽</strong>开始年轻代GC：这是一个<strong>并行的独占式</strong>收集器。在年轻代回收器，G1 GC暂停所有应用程序线程，启动多线程执行年轻代回收。然后<strong>从年轻代区间移动存活对象到Survivor区间或者老年代区间，也有可能是两个区间都会涉及</strong>。</p>
+<p>②当堆使用达到阈值（默认45%），开始老年代并发标记过程</p>
+<p>③标记完成马上开始混合回收过程。<font color="red">G1把老年区存活下来的对象移动到空闲区间，这些空闲区间就会变成老年区。G1的老年代回收器不需要整个老年代被回收，一次只需要扫描/回收一小部分老年代的Region就可以了</font>。老年代和年轻代是一起被回收的，所有叫混合回收。</p>
+<h3 id="记忆集和写屏障"><a href="#记忆集和写屏障" class="headerlink" title="记忆集和写屏障"></a>记忆集和写屏障</h3><blockquote>
+<p>解决跨代引用和分区引用的问题。</p>
+</blockquote>
+<p>如果存在跨代引用，或者像G1 ZGC Partial GC等分区收集的，给每个区整一个记忆集，用来存放谁引用了这个里边的对象，可以减少遍历次数。用空间换时间。</p>
+<h3 id="G1垃圾回收详细说明"><a href="#G1垃圾回收详细说明" class="headerlink" title="G1垃圾回收详细说明"></a>G1垃圾回收详细说明</h3><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201024134206676.png"></p>
+<blockquote>
+<p>年轻代</p>
+</blockquote>
+<ul>
+<li><p>扫描根</p>
+<blockquote>
+<p>static变量指向的对象，正在执行的栈帧调用链条上的局部变量等。根引用连同RSet记录的外部引用作为扫描存活对象的入口</p>
+</blockquote>
+</li>
+<li><p>更新RSet</p>
+<blockquote>
+<p>处理dirty card queue中的card，更新RSet</p>
+</blockquote>
+</li>
+<li><p>处理RSet</p>
+<blockquote>
+<p>识别被老年代对象指向的Eden中的对象，这些被指向的Eden中的对象被认为是存活的对象。</p>
+</blockquote>
+</li>
+<li><p>复制对象</p>
+<blockquote>
+<p>Eden区活下来的对象复制到Survivor区中空的内存分段，Survivor区活下来的age没有达到阈值，age++并放到空的内存分段。达到阈值，晋升到Old区空的内存分段。如果Survivor空间不够，Eden区部分数据会直接晋升到Old区空间</p>
+</blockquote>
+</li>
+<li><p>处理引用</p>
+<blockquote>
+<p>处理 Soft，Weak，Phantom，Final，JNI Weak等引用。最终Eden区的数据为空，GC停止工作，而且目标内存中的对象都是连续存储的，没有碎片，所有复制过程可以达到内存整理的效果，减少碎片。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>并发标记过程</p>
+</blockquote>
+<ul>
+<li>初始标记阶段：标记从根节点<strong>直接</strong>可达的对象。这个阶段是STW的，并且会触发一次年轻代 GC</li>
+<li>根区域扫描：G1扫描Survivor区，直接可达的老年代区域对象，并标记被引用的对象。这一过程必须在young gc之前完成</li>
+<li>并发标记：在整个堆中进行并发标记，此过程可能被young gc中断。在并发标记阶段，若发现区域对象中的所有对象都是垃圾，这个区域会被立即回收，同时并发标记阶段会计算每个区域的对象活性。</li>
+<li>再次标记：由于用户线程持续进行，需要修正上一次的标记结果，STW性质，用的SATB算法</li>
+<li>独占清理，计算各个区域的存活对象和GC回收比例，进行排序，识别可能混合回收的区域。为下阶段做铺垫，STW</li>
+<li>并发清理：识别并清理完全空闲的区域</li>
+</ul>
+<blockquote>
+<p>混合回收</p>
+</blockquote>
+<p>除了会回收整个Young Region还会回收一部分Old Region  <strong>是一部分老年代不是全部老年代</strong></p>
+<p><img src="https://img03.sogoucdn.com/app/a/100520146/7f76e8914fd67eaa377965577b5b23a9"></p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><p>年轻代大小</p>
+<p>暂停时间目标不要太严苛</p>
+<h2 id="垃圾回收器总结"><a href="#垃圾回收器总结" class="headerlink" title="垃圾回收器总结"></a>垃圾回收器总结</h2><p><img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20201025160544477.png" alt="比较"></p>
+<h2 id="GC日志分析"><a href="#GC日志分析" class="headerlink" title="GC日志分析"></a>GC日志分析</h2><h2 id="垃圾回收器的新发展"><a href="#垃圾回收器的新发展" class="headerlink" title="垃圾回收器的新发展"></a>垃圾回收器的新发展</h2>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Max</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://zhy2021.github.io/2020/10/22/jvm09/">https://zhy2021.github.io/2020/10/22/jvm09/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Max</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/jvm/">
+                                    <span class="chip bg-color">jvm</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '5FkhQebEqGdoNnuL654mv5KM-gzGzoHsz',
+        appKey: 'NNEBzCiygD4tBLqHt8diLxda',
+        notify: 'true' === 'true',
+        verify: 'true' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/10/25/jvm-mian-shi-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="jvm面试题">
+                        
+                        <span class="card-title">jvm面试题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            jvm的相关面试题
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/jvm/" class="post-category">
+                                    jvm
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/jvm/">
+                        <span class="chip bg-color">jvm</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/10/20/jvm08/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="JVM08">
+                        
+                        <span class="card-title">JVM08</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Max
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Max|Blog<br />'
+            + '文章作者: Max<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="2844914148"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Max</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">127.9k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "2";
+                    var startDate = "13";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
