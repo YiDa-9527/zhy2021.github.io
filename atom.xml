@@ -6,7 +6,7 @@
   <link href="https://zhy2021.github.io/atom.xml" rel="self"/>
   
   <link href="https://zhy2021.github.io/"/>
-  <updated>2021-02-06T03:29:18.980Z</updated>
+  <updated>2021-02-24T08:01:16.250Z</updated>
   <id>https://zhy2021.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>SpringCloud技术栈</title>
+    <link href="https://zhy2021.github.io/2021/02/14/springcloud-ji-zhu-zhan/"/>
+    <id>https://zhy2021.github.io/2021/02/14/springcloud-ji-zhu-zhan/</id>
+    <published>2021-02-14T13:12:48.000Z</published>
+    <updated>2021-02-24T08:01:16.250Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SpringCloud技术栈&quot;&gt;&lt;a href=&quot;#SpringCloud技术栈&quot; class=&quot;headerlink&quot; title=&quot;SpringCloud技术栈&quot;&gt;&lt;/a&gt;SpringCloud技术栈&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>manjaro安装和配置</title>
@@ -487,38 +508,6 @@
     <category term="微服务" scheme="https://zhy2021.github.io/tags/%E5%BE%AE%E6%9C%8D%E5%8A%A1/"/>
     
     <category term="Docker" scheme="https://zhy2021.github.io/tags/Docker/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>dubbo遇到的问题</title>
-    <link href="https://zhy2021.github.io/2020/08/10/dubbo-yu-dao-de-wen-ti/"/>
-    <id>https://zhy2021.github.io/2020/08/10/dubbo-yu-dao-de-wen-ti/</id>
-    <published>2020-08-10T02:58:49.000Z</published>
-    <updated>2021-01-14T15:33:18.190Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;问题产生环境：  &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;dubbo 2.7.6&lt;/li&gt;
-&lt;li&gt;springboot 2.2.6&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;问题&lt;/strong&gt;：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;启用dubbo后,</summary>
-        
-      
-    
-    
-    
-    <category term="dubbo" scheme="https://zhy2021.github.io/categories/dubbo/"/>
-    
-    
-    <category term="dubbo" scheme="https://zhy2021.github.io/tags/dubbo/"/>
     
   </entry>
   
